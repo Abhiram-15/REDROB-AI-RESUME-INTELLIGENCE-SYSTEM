@@ -1,0 +1,81 @@
+# Redrob Hackathon — Submission Metadata
+# The fields here match what you submit via the portal at upload time.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "FILL_IN_YOUR_TEAM_NAME"  # Used in leaderboard and announcements
+
+primary_contact:
+  name: "Yedillu Gunasekar"
+  email: "gunasekaryedillu@gmail.com"   # Used for all organizer communication
+  phone: "+91-FILL_IN_PHONE"        # Used for top-50 / top-10 outreach
+
+team_members:
+  - name: "Yedillu Gunasekar"
+    email: "gunasekaryedillu@gmail.com"
+    role: "Team Leader"
+  - name: "Mutyam SriramKarthik"
+    email: "sriramkarthikmutyam@gmail.com"
+    role: "ML Engineer"
+  - name: "Durga Pujith Bollu"
+    email: "bolludurgapujith@gmail.com"
+    role: "ML Engineer"
+  - name: "Buddepu Abhiram"
+    email: "buddepuabhiram@gmail.com"
+    role: "ML Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/Abhiram-15/REDROB-AI-RESUME-INTELLIGENCE-SYSTEM"
+# Required. Must be reachable. Private repos OK if you can grant organizer access at Stage 3.
+
+sandbox_link: "FILL_IN_YOUR_SANDBOX_LINK"
+# Required. A working hosted environment (HuggingFace Spaces, Streamlit Cloud, etc.)
+
+reproduce_command: "python src/rank.py --candidates ./India_runs_data_and_ai_challenge/candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "FILL_IN_YOUR_COMPUTE_PLATFORM"     # e.g., "AWS EC2 c5.4xlarge", "Local Windows PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.14.4"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: true
+  pre_computation_time_minutes: 5
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Gemini"
+
+ai_usage_summary: |
+  Used Gemini 3.5 Flash for design review, coding of rule-based features, 
+  adversarial testing, and setting up reproducible pipeline constraints. No 
+  candidate data was sent to external LLMs during the ranking phase.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Hybrid rule-based and local semantic ranking system with availability modifier. 
+  Consists of a title matching filter (excluding consulting/services companies), 
+  skill-duration-endorsement weighted score, target-experience fit decay, and local 
+  SentenceTransformers embeddings. Flagged honeypots are penalized with a score floor.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

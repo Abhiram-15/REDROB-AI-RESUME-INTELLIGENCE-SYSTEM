@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Model cache (download via download_model.py)
+model_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Hypothesis database
+.hypothesis/
+
+# pytest cache
+.pytest_cache/
+
+# Pre-computed embeddings (regenerate via precompute_embeddings.py)
+embeddings.npz
+
+# Generated submissions (reproduce via rank.py)
+submission.csv
+sample_submission.csv
+
+# Ignore massive dataset file
+India_runs_data_and_ai_challenge/candidates.jsonl
