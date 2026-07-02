@@ -31,7 +31,7 @@ team_members:
 github_repo: "https://github.com/Abhiram-15/REDROB-AI-RESUME-INTELLIGENCE-SYSTEM"
 # Required. Must be reachable. Private repos OK if you can grant organizer access at Stage 3.
 
-sandbox_link: "FILL_IN_YOUR_SANDBOX_LINK"
+sandbox_link: "https://redrob-ai-resume-intelligence-system-kgxcn7hvhdntbucv5msftb.streamlit.app/"
 # Required. A working hosted environment (HuggingFace Spaces, Streamlit Cloud, etc.)
 
 reproduce_command: "python src/rank.py --candidates ./India_runs_data_and_ai_challenge/candidates.jsonl --out ./submission.csv"
